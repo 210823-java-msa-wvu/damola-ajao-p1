@@ -4,7 +4,21 @@
     <title>Login Page</title>
 </head>
 <body>
-<h2> Sign-in Credentials</h2>
+<h2>Reimbursement Log-in</h2>
+<div class="container">
+    <form action="/LibraryServlet/login" method="POST">
 
+        <label for="username">Username:
+            <input id="username" type="text" name="username" class="form-control">
+        </label>
+        <br><br>
+        <label for="password">Password:
+            <input id="password" type="password" name="password" class="form-control">
+        </label>
+        <br><br>
+        <input type="submit" class="btn btn-primary" onclick="login()" value="Log In">
+    </form>
+
+</div>
 </body>
 </html>

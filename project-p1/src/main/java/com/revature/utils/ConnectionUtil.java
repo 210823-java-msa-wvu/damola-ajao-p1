@@ -16,7 +16,7 @@ public class ConnectionUtil {
     private ConnectionUtil() {
         props = new Properties();
 
-        InputStream dbProps = ConnectionUtil.class.getClassLoader().getResourceAsStream("connection.properties");
+        InputStream dbProps = ConnectionUtil.class.getClassLoader().getResourceAsStream("resources/connection.properties");
         try {
             props.load(dbProps);
         } catch (IOException e) {

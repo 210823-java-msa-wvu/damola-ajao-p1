@@ -80,6 +80,7 @@ public class UserHibernate implements UserRepo {
         try (Session s = HibernateUtil.getSession()) {
 
         }
+        return null;
     }
 
     @Override

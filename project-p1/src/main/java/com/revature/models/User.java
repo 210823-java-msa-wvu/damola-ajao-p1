@@ -8,8 +8,15 @@ public class User {
     private String department;
     private String username;
     private String password;
+    private boolean balance;
+    private Integer amount;
 
-    public User(Integer id, String firstname, String lastname, String jobtitle, String department, String username, String password) {
+    public User() {
+    }
+
+    public User(Integer id, String firstname, String lastname, String jobtitle,
+                String department, String username, String password,
+                boolean balance, Integer amount) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -17,6 +24,8 @@ public class User {
         this.department = department;
         this.username = username;
         this.password = password;
+        this.balance = balance;
+        this.amount = amount;
     }
 
     public Integer getId() {
@@ -75,6 +84,22 @@ public class User {
         this.password = password;
     }
 
+    public boolean isBalance() {
+        return balance;
+    }
+
+    public void setBalance(boolean balance) {
+        this.balance = balance;
+    }
+
+    public Integer getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -85,6 +110,8 @@ public class User {
                 ", department='" + department + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", balance=" + balance +
+                ", amount=" + amount +
                 '}';
     }
 }
