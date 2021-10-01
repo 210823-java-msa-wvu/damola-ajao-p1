@@ -1,9 +1,7 @@
 package com.revature.services;
 
-package com.revature.services;
-
 import com.revature.models.User;
-import com.revature.repos.UserRepo;
+import com.revature.repos.jdbc.UserRepo;
 
 import java.util.List;
 

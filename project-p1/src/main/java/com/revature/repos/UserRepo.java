@@ -4,29 +4,18 @@ import com.revature.models.User;
 
 import java.util.List;
 
-public class UserRepo implements CrudRepository<User> {
-    @Override
-    public User add(User user) {
-        return null;
-    }
+public interface UserRepo extends CrudRepository<User>{
 
-    @Override
-    public User getById(Integer id) {
-        return null;
-    }
+    User add(User user);
 
-    @Override
-    public List<User> getAll() {
-        return null;
-    }
+    User getById(Integer id);
 
-    @Override
-    public void update(User user) {
+    User getByUsername(String username);
 
-    }
+    List<User> getAll();
 
-    @Override
-    public void delete(Integer id) {
+    void update(User user);
 
-    }
+    void delete(Integer id);
+
 }

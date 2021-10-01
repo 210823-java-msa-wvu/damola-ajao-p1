@@ -1,4 +1,6 @@
 package com.revature.repos;
 
-public class ReimbursementRepo {
+import com.revature.models.Reimbursement;
+
+public interface ReimbursementRepo extends CrudRepository<Reimbursement> {
 }

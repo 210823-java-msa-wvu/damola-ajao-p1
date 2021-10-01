@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7b5845e-825f-4964-92c8-c8cd21e58609" name="Changes" comment="" />
+    <list default="true" id="f7b5845e-825f-4964-92c8-c8cd21e58609" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/project-p1/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/controllers/ReimbursementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/GradeRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/ReStatusRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/hibernate/UserHibernate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/jdbc/ReimbursementRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/jdbc/UserRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/servlets/FrontControllerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/HTML/bencopage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/HTML/directsupervisor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/JavaScript/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/ReimbursementRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/ReimbursementRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/services/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/services/UserServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/resources/connection.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/resources/connection.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +39,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
