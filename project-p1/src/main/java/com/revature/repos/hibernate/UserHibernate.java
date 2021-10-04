@@ -27,12 +27,6 @@ public class UserHibernate implements UserRepo {
         s.close();
         return u;
 
-//        String sql = "select * from users where id = :id";
-//// We can still use native sql - but you shouldn't unless doing large updates or complicated queries.
-//        NativeQuery<User> nq = s.createNativeQuery(sql);
-//        nq.setParameter("id", id);
-//        User u = nq.stream().findFirst().get();
-//        return u;
     }
 
     @Override
