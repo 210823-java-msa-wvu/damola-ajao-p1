@@ -5,6 +5,7 @@ import com.revature.repos.UserRepo;
 import com.revature.utils.HibernateUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -69,12 +70,18 @@ public class UserHibernate implements UserRepo {
 
     @Override
     public List<User> getAll() {
-        List<User> users;
+        // Let's use the Query Interface
+        Session s = HibernateUtil.getSession();
 
-        try (Session s = HibernateUtil.getSession()) {
+        // Create a query object
+        String query = "from users"; // this is HQL (NOT native sql -> select * from authors
+        Query<User> q = s.createQuery(query, User.class);
 
-        }
-        return null;
+        List<User> authors = q.getResultList();
+
+        s.close();
+
+        return authors;
     }
 
     @Override

@@ -19,9 +19,10 @@ public class LoginController implements FrontController {
 
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        String job_title = request.getParameter("job_title");
         System.out.println("Username: " + username + " Password: " + password);
         if (userServices.login(username, password)) {
-            response.sendRedirect("static/books.html");
+            response.sendRedirect("static/employee.html");
         } else {
             response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Invalid login credentials");
         }

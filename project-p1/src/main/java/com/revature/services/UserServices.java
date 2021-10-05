@@ -1,7 +1,7 @@
 package com.revature.services;
 
 import com.revature.models.User;
-import com.revature.repos.jdbc.UserJDBC;
+import com.revature.repos.hibernate.UserHibernate;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import java.util.List;
 // Specifically any services that need to be available to our users.
 public class UserServices {
 
-    UserJDBC userRepo = new UserJDBC();
-
+   //UserJDBC userRepo = new UserJDBC();
+    UserHibernate userRepo = new UserHibernate();
     public boolean login(String username, String password) {
 
         // in order to log in a user, we will need username and password
