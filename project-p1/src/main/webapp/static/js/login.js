@@ -5,6 +5,7 @@ async function login() {
     let user = {
         username: document.getElementById('username').value,
         password: document.getElementById('password').value
+        job_title: document.getElementById()
     }
 
     console.log(user);

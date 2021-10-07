@@ -5,11 +5,9 @@
     <session-factory>
 
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">
-
-        </property>
-        <property name="hibernate.connection.username"></property>
-        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.connection.url">jdbc:postgresql://cohortdatabase.cx5b2xhr3nuf.us-east-2.rds.amazonaws.com:5432/postgres?currentSchema=reimburse</property>
+        <property name="hibernate.connection.username">damola</property>
+        <property name="hibernate.connection.password">KalIOun89</property>
 
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
 
@@ -17,9 +15,10 @@
         <property name="hibernate.format_sql">true</property>
         <property name="use_sql_comments">true</property>
 
-        <mapping class="com.revature.models.Book"></mapping>
-        <mapping class="com.revature.models.Author"></mapping>
+        <mapping class="com.revature.models.Grade"></mapping>
+        <mapping class="com.revature.models.Reimbursement"></mapping>
         <mapping class="com.revature.models.User"></mapping>
+        <mapping class="com.revature.models.ReStatus"></mapping>
 
     </session-factory>
 </hibernate-configuration>

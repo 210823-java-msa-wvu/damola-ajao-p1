@@ -21,12 +21,19 @@ public class LoginController implements FrontController {
         String password = request.getParameter("password");
         String job_title = request.getParameter("job_title");
         System.out.println("Username: " + username + " Password: " + password);
-        if (userServices.login(username, password)) {
+        if (userServices.login(username, password) && job_title == "Employee") {
             response.sendRedirect("static/employee.html");
-        } else {
-            response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Invalid login credentials");
+        } else if (userServices.login(username, password) && job_title == "Direct Supervisor") {
+            response.sendRedirect("static/directsupervisor.html");
+        } else if (userServices.login(username, password) && job_title == "Department Head") {
+            response.sendRedirect("static/departhead.html");
+        }else if (userServices.login(username, password) && job_title == "Benefits Coordinator") {
+            response.sendRedirect("static/bencopage.html");
+        } else if(userServices.login(username, password) != true){
+                response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Invalid login credentials");
+            }
         }
 
 
     }
-}
+
