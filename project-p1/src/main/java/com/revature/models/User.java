@@ -7,14 +7,31 @@ import javax.persistence.*;
 public class User {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name = "userid")
     private Integer id;
+
+    @Column(name = "firstname")
     private String firstname;
+
+    @Column(name = "lastname")
     private String lastname;
+
+    @Column(name = "job_title")
     private String jobtitle;
+
+    @Column(name = "department")
     private String department;
+
+    @Column(name = "username")
     private String username;
+
+    @Column(name = "password")
     private String password;
+
+    @Column(name = "balanceboolean")
     private boolean balance;
+
+    @Column(name = "balance")
     private Integer amount;
 
     public User() {

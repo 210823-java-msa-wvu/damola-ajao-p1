@@ -34,4 +34,12 @@ public class UserServices {
         return userRepo.getAll();
 
     }
+
+    public String UserJob(String username) {
+        User u = userRepo.getByUsername(username);
+        if (u != null){
+            return u.getJobtitle();
+        }else
+        return null;
+    }
 }

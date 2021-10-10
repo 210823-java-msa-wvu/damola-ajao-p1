@@ -72,8 +72,10 @@
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
 
+
     <welcome-file-list>
         <welcome-file>login.html</welcome-file>
+        <welcome-file>emloyeeform.html</welcome-file>
     </welcome-file-list>
 
 

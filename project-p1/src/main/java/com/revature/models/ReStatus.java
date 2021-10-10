@@ -1,18 +1,49 @@
 package com.revature.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="rstatus")
 public class ReStatus {
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name = "rlink")
     private Integer rlink;
+
+    @Column(name = "direct_supervisor")
     private String direct_supervisor;
+
+    @Column(name = "ds_approval")
     private boolean ds_approval;
+
+    @Column(name = "ds_date")
     private String ds_date;
+
+    @Column(name = "depart_head")
     private String depart_head;
+
+    @Column(name = "dh_approval")
     private boolean dh_approval;
+
+    @Column(name = "dh_date")
     private String dh_date;
+
+    @Column(name = "benco")
     private String benco;
+
+    @Column(name = "b_approval")
     private boolean b_approval;
+
+    @Column(name = "b_date")
     private String b_date;
+
+    @Column(name = "benco_supervisor")
     private String benco_supervisor;
+
+    @Column(name = "bs_approval")
     private boolean bs_approval;
+
+    @Column(name = "bs_date")
     private String bs_date;
 
     public ReStatus(Integer rlink, String direct_supervisor, boolean ds_approval, String ds_date, String depart_head, boolean dh_approval, String dh_date, String benco, boolean b_approval, String b_date, String benco_supervisor, boolean bs_approval, String bs_date) {

@@ -1,4 +1,6 @@
 package com.revature.servlets;
 
-public class LoginServlet {
+public class LoginServlet extends FrontControllerServlet {
+
+
 }

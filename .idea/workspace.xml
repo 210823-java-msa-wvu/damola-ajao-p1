@@ -5,21 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7b5845e-825f-4964-92c8-c8cd21e58609" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project-p1/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/controllers/ReimbursementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/GradeRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/ReStatusRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/hibernate/UserHibernate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/jdbc/ReimbursementRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/jdbc/UserRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/servlets/FrontControllerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/HTML/bencopage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/HTML/directsupervisor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/JavaScript/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/ReimbursementRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/ReimbursementRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/UserRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/services/GradeServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/services/ReStatusServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/services/ReimbursementServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/static/js/directsupervisorapproval.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/static/js/grade.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/static/js/restatus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/static/userlanding.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-p1/target/classes/com/revature/services/ReimbursementServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/models/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/models/Grade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/models/ReStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/models/ReStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/models/Reimbursement.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/models/Reimbursement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/hibernate/UserHibernate.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/repos/hibernate/UserHibernate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/services/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/services/UserServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-p1/src/main/resources/connection.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/resources/connection.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/java/com/revature/servlets/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/webapp/static/bencopage.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/static/bencopage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/webapp/static/departhead.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/static/departhead.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/webapp/static/directsupervisor.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/static/directsupervisor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/webapp/static/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/static/employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/webapp/static/employeeform.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/static/employeeform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/webapp/static/falselogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/static/falselogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/src/main/webapp/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/src/main/webapp/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/target/classes/com/revature/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/target/classes/com/revature/controllers/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/target/classes/com/revature/models/Grade.class" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/target/classes/com/revature/models/Grade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/target/classes/com/revature/models/ReStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/target/classes/com/revature/models/ReStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/target/classes/com/revature/models/Reimbursement.class" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/target/classes/com/revature/models/Reimbursement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/target/classes/com/revature/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/target/classes/com/revature/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/target/classes/com/revature/repos/hibernate/UserHibernate.class" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/target/classes/com/revature/repos/hibernate/UserHibernate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/target/classes/com/revature/services/UserServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/target/classes/com/revature/services/UserServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-p1/target/classes/com/revature/servlets/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/project-p1/target/classes/com/revature/servlets/LoginServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

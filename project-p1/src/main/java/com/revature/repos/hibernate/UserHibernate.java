@@ -49,6 +49,7 @@ public class UserHibernate implements UserRepo {
 
             // Use Predicates to narrow down our query
             Predicate predicate = criteriaBuilder.equal(root.get("username"), username);
+            // Predicate predicate1 = criteriaBuilder.equal(root.get("password"), username);
             // you can create multiple predicates (i.e. username AND password)
 
             // Bringing our Criteria Builder and our Criteria Query together...

@@ -1,17 +1,42 @@
 package com.revature.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="users")
 public class Reimbursement {
-    private Integer remiburseid;
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name = "reimburseid")
+    private Integer reimburseid;
+
+    @Column(name = "useridlink")
+    private Integer useridlink;
+
+    @Column(name = "date")
     private String date;
+
+    @Column(name = "time")
     private String time;
+
+    @Column(name = "location")
     private String location;
+
+    @Column(name = "descript")
     private String descript;
+
+    @Column(name = "cost")
     private String cost;
+
+    @Column(name = "grading_format")
     private String grading_format;
+
+    @Column(name = "type_of_event")
     private String type_of_event;
 
-    public Reimbursement(Integer remiburseid, String date, String time, String location, String descript, String cost, String grading_format, String type_of_event) {
-        this.remiburseid = remiburseid;
+    public Reimbursement(Integer reimburseid, Integer useridlink, String date, String time, String location, String descript, String cost, String grading_format, String type_of_event) {
+        this.reimburseid = reimburseid;
+        this.useridlink = useridlink;
         this.date = date;
         this.time = time;
         this.location = location;
@@ -21,12 +46,12 @@ public class Reimbursement {
         this.type_of_event = type_of_event;
     }
 
-    public Integer getRemiburseid() {
-        return remiburseid;
+    public Integer getReimburseid() {
+        return reimburseid;
     }
 
-    public void setRemiburseid(Integer remiburseid) {
-        this.remiburseid = remiburseid;
+    public void setReimburseid(Integer reimburseid) {
+        this.reimburseid = reimburseid;
     }
 
     public String getDate() {
@@ -85,10 +110,19 @@ public class Reimbursement {
         this.type_of_event = type_of_event;
     }
 
+    public Integer getUseridlink() {
+        return useridlink;
+    }
+
+    public void setUseridlink(Integer useridlink) {
+        this.useridlink = useridlink;
+    }
+
     @Override
     public String toString() {
         return "Reimbursement{" +
-                "remiburseid=" + remiburseid +
+                "reimburseid=" + reimburseid +
+                ", useridlink=" + useridlink +
                 ", date='" + date + '\'' +
                 ", time='" + time + '\'' +
                 ", location='" + location + '\'' +

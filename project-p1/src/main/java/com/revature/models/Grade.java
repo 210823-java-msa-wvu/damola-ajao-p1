@@ -1,11 +1,25 @@
 package com.revature.models;
 
-public class Grade {
+import javax.persistence.*;
 
+@Entity
+@Table(name="grade")
+public class Grade {
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name = "entryid")
     private String entryid;
+
+    @Column(name = "event_name")
     private String event_name;
+
+    @Column(name = "event_grade")
     private String event_grade;
+
+    @Column(name = "grade_scale")
     private String grade_scale;
+
+    @Column(name = "rlink")
     private Integer rlink;
 
     public Grade(String entryid, String event_name, String event_grade, String grade_scale, Integer rlink) {

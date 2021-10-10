@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <div class="topnav">
+        <a class="active" href="#home">Sign Out</a>
+        <a href="#news">Status Check</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+    <title>Benefits Coordinator</title>
+    <h1>Department Head</h1>
 </head>
 <body>
 
+<form action="/project-p1/" method="POST">
+    <div>
+        <label for="date">Date of Approval</label>
+        <input type="date" name="date" id="date" min="2018-01-01">
+    </div>
+    <br>
+    <div>
+        <label for="descript">Comments</label>
+        <textarea id="descript" name="descript"></textarea>
+    </div>
+    <br>
+    Department Head Approval
+    <div>
+        <label for="uni">Approve</label>
+        <input type="radio" name="type" id="uni" value="uni">
+    </div>
+    <div>
+        <label for="semi">Disapprove</label>
+        <input type="radio" name="type" id="semi" value="semi">
+    </div>
+    <br>
+    <input type="submit" class="btn btn-primary" onclick="login()" value="Submit">
+</form>
 </body>
 </html>
