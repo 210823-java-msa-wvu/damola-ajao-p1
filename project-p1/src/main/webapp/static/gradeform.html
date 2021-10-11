@@ -4,7 +4,36 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<h1>Grade Form</h1>
+<body style="background-color:grey;">
+<br>
+<div class="container">
+    <form action="/project-p1/static/employee" method="POST">
+        <div>
+            <label for="event">Event Name</label>
+            <br>
+            <textarea name="event" rows="6" cols="50"></textarea>
+        </div>
+        <br>
+        <div>
+            <label>Grade</label>
+            <label name="grade">Grade</label>
+            <br>
+            <textarea name="grade" rows="6" cols="50"></textarea>
+        </div>
+        <br>
+        <div>
+            <label for="scale">Grade Scale</label>
+            <br>
+            <textarea name="scale" rows="6" cols="50"></textarea>
+        </div>
+        <br>
+        <input type="submit" class="btn btn-primary" value="Submit">
 
+
+    </form>
+
+
+</div>
 </body>
 </html>
