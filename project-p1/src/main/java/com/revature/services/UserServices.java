@@ -42,4 +42,12 @@ public class UserServices {
         }else
         return null;
     }
+
+    public Integer UserId(String username){
+        User u = userRepo.getByUsername(username);
+        if (u != null){
+            return u.getId();
+        }else
+            return null;
+    }
 }

@@ -34,6 +34,9 @@ public class Reimbursement {
     @Column(name = "type_of_event")
     private String type_of_event;
 
+    public Reimbursement() {
+    }
+
     public Reimbursement(Integer reimburseid, Integer useridlink, String date, String time, String location, String descript, String cost, String grading_format, String type_of_event) {
         this.reimburseid = reimburseid;
         this.useridlink = useridlink;

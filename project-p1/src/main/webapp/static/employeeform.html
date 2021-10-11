@@ -8,7 +8,7 @@
 <body>
 <br>
 <div class="container">
-    <form action="/project-p1/login" method="POST">
+    <form action="/project-p1/static/employee" method="POST">
         <div>
             <label for="date">Date</label>
             <input type="date" name="date" id="date" min="2018-01-01">
@@ -36,26 +36,26 @@
                 <input type="radio" name="type" id="semi" value="semi">
             </div>
             <div>
-                <label for="cert">Certification Preparation</label>
-                <input type="radio" name="type" id="cert" value="cert">
+                <label for="certs">Certification Preparation</label>
+                <input type="radio" name="type" id="certs" value="cert">
             </div>
             <div>
                 <label for="certs">Certifications</label>
                 <input type="radio" name="type" id="certs" value="certs">
             </div>
             <div>
-                <label for="tech">Technical Training</label>
-                <input type="radio" name="type" id="tech" value="tech">
+                <label for="certs">Technical Training</label>
+                <input type="radio" name="type" id="certs" value="tech">
             </div>
             <div>
-                <label for="other">Other</label>
-                <input type="radio" name="type" id="other" value="other">
+                <label for="certs">Other</label>
+                <input type="radio" name="type" id="certs" value="other">
             </div>
         </div>
         <br>
         <div>
             Location
-            <select>
+            <select id="location" name="location">
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
                 <option value="AZ">Arizona</option>
@@ -111,15 +111,18 @@
         </div>
         <br>
         Cost
-        <input type="number" min="0.00" max="10000.00" step="0.01" />
+        <input type="number" id="money" name="cost" min="0.00" max="10000.00" step="0.01" />
         <br>
         Grading Format
-        <select>
+        <select name="grading">
             <option>Letter Grade</option>
             <option>Pass/Fail</option>
         </select>
-        <input type="submit" class="btn btn-primary" onclick="login()" value="Submit">
+        <input type="submit" class="btn btn-primary" value="Submit">
+
+
     </form>
+
 
 </div>
 </body>

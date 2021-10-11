@@ -6,11 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class BencoServlet extends HttpServlet {
-
-
-    //ReStatus bencoStats = new ReStatus();
-
+public class DirectSupervisorServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
