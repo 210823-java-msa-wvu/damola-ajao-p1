@@ -1,5 +1,5 @@
 function load() {
-    document.getCoo\\\
+    document.getCoo
 
 
 
