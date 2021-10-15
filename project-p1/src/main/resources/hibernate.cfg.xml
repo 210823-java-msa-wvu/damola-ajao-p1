@@ -18,7 +18,7 @@
 
         <mapping class="com.revature.models.Reimbursement"></mapping>
         <mapping class="com.revature.models.User"></mapping>
-        <mapping class="com.revature.models.ReStatus"></mapping>
+        <mapping class="com.revature.models.ReStatusDS"></mapping>
 
     </session-factory>
 </hibernate-configuration>

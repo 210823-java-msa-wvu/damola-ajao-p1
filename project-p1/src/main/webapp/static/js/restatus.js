@@ -1,7 +1,7 @@
 
 function getReins() {
 
-    let url = 'http://localhost:8080/project-p1/static/status';
+    let url = 'http://localhost:8080/project-p1/status';
 
     let section = document.getElementById("bankai");
     section.innerHTML='<div class="spinner-border text-primary"></div>';

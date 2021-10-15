@@ -1,7 +1,7 @@
 package com.revature.controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.revature.models.ReStatus;
+import com.revature.models.ReStatusDS;
 import com.revature.services.ReStatusServices;
 
 import javax.servlet.ServletException;
@@ -33,7 +33,7 @@ public class ReStatusController implements FrontController{
 
                 case "POST": {
                     // then we would add the request (read from the request body) to the database
-                    ReStatus b = om.readValue(request.getReader(), ReStatus.class);
+                    ReStatusDS b = om.readValue(request.getReader(), ReStatusDS.class);
 
                     response.getWriter().write(om.writeValueAsString(statService.createBook(b)));
                     break;
@@ -47,7 +47,7 @@ public class ReStatusController implements FrontController{
 
             // save that attribute into an integer
             int bookId = Integer.parseInt(path);
-            ReStatus b = null;
+            ReStatusDS b = null;
 
             switch (request.getMethod()) {
                 // /books/1
@@ -62,7 +62,7 @@ public class ReStatusController implements FrontController{
                 }
 
                 case "PUT": {
-                    b = om.readValue(request.getReader(), ReStatus.class);
+                    b = om.readValue(request.getReader(), ReStatusDS.class);
                     statService.updateBook(b);
                     break;
                 }

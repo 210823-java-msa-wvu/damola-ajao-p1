@@ -1,7 +1,7 @@
 package com.revature.controllers;
 
-import com.revature.models.ReStatus;
-import com.revature.repos.hibernate.ReStatusHibernate;
+import com.revature.models.ReStatusDH;
+import com.revature.repos.hibernate.ReStatusDHHibernate;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -13,9 +13,9 @@ public class DepartController implements FrontController{
     public void process(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
 
-        ReStatus tora = new ReStatus();
-        ReStatusHibernate tatoba = new ReStatusHibernate();
-        //need to get Id
+        ReStatusDH tora = new ReStatusDH();
+        ReStatusDHHibernate tatoba = new ReStatusDHHibernate();
+        tora.setRlink(Integer.parseInt(request.getParameter("statnum")));
         tora.setDepart_head(request.getParameter("descript"));
         tora.setDh_date(request.getParameter("date"));
         tora.setDh_approval(Boolean.parseBoolean(request.getParameter("type")));

@@ -1,29 +1,29 @@
 package com.revature.services;
 
-import com.revature.models.ReStatus;
-import com.revature.repos.hibernate.ReStatusHibernate;
+import com.revature.models.ReStatusDS;
+import com.revature.repos.hibernate.ReStatusDSHibernate;
 
 import java.util.List;
 
 public class ReStatusServices {
 
 
-    ReStatusHibernate statusRepo = new ReStatusHibernate();
+    ReStatusDSHibernate statusRepo = new ReStatusDSHibernate();
 
-    public ReStatus createBook(ReStatus b) {
+    public ReStatusDS createBook(ReStatusDS b) {
         return statusRepo.add(b);
 
     }
 
-    public ReStatus searchById(Integer id) {
+    public ReStatusDS searchById(Integer id) {
         return statusRepo.getById(id);
     }
 
-    public List<ReStatus> getAllStats() {
+    public List<ReStatusDS> getAllStats() {
         return statusRepo.getAll();
     }
 
-    public void updateBook(ReStatus b) {
+    public void updateBook(ReStatusDS b) {
 
         // check to make sure book exists
         if (statusRepo.getById(b.getRlink()) != null) {
@@ -39,6 +39,6 @@ public class ReStatusServices {
         if (statusRepo.getById(id) != null)
             statusRepo.delete(id);
         else
-            System.out.println("That book did not exist");
+            System.out.println("That status did not exist");
     }
 }

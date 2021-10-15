@@ -1,7 +1,7 @@
 package com.revature.repos.hibernate;
 
-import com.revature.models.ReStatus;
-import com.revature.repos.ReStatusRepo;
+import com.revature.models.ReStatusDH;
+import com.revature.repos.ReStatusRepoDH;
 import com.revature.utils.HibernateUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -10,9 +10,9 @@ import org.hibernate.query.Query;
 
 import java.util.List;
 
-public class ReStatusHibernate implements ReStatusRepo {
+public class ReStatusDHHibernate implements ReStatusRepoDH {
     @Override
-    public ReStatus add(ReStatus reStatus) {
+    public ReStatusDH add(ReStatusDH reStatusDH) {
         // Let's use the Transaction Interface - gives us a little more granular control
         Session s = HibernateUtil.getSession();
         // I'm going to use a try catch finally to make sure that our transaction only commits to the database
@@ -20,7 +20,7 @@ public class ReStatusHibernate implements ReStatusRepo {
         Transaction tx = null;
         try {
             tx = s.beginTransaction();
-            s.save(reStatus);
+            s.save(reStatusDH);
             tx.commit();
         } catch (HibernateException e) {
             e.printStackTrace();
@@ -29,16 +29,19 @@ public class ReStatusHibernate implements ReStatusRepo {
         } finally {
             s.close();
         }
-        return reStatus;
+        return reStatusDH;
     }
 
+
+
+
     @Override
-    public ReStatus getById(Integer id) {
+    public ReStatusDH getById(Integer id) {
         // Get Session
         Session s = HibernateUtil.getSession();
 
         // Query the db
-        ReStatus a = s.get(ReStatus.class, id);
+        ReStatusDH a = s.get(ReStatusDH.class, id);
 
         // Close our connection
         s.close();
@@ -47,16 +50,16 @@ public class ReStatusHibernate implements ReStatusRepo {
     }
 
     @Override
-    public List<ReStatus> getAll() {
+    public List<ReStatusDH> getAll() {
 
         // Let's use the Query Interface
         Session s = HibernateUtil.getSession();
 
         // Create a query object
-        String query = "from rstatus"; // this is HQL (NOT native sql -> select * from authors
-        Query<ReStatus> q = s.createQuery(query, ReStatus.class);
+        String query = "from depart"; // this is HQL (NOT native sql -> select * from authors
+        Query<ReStatusDH> q = s.createQuery(query, ReStatusDH.class);
 
-        List<ReStatus> authors = q.getResultList();
+        List<ReStatusDH> authors = q.getResultList();
 
         s.close();
 
@@ -64,8 +67,9 @@ public class ReStatusHibernate implements ReStatusRepo {
 
     }
 
+
     @Override
-    public void update(ReStatus reStatus) {
+    public void update(ReStatusDH reStatus) {
 
         Transaction tx = null;
         try (Session s = HibernateUtil.getSession()) {
@@ -95,5 +99,4 @@ public class ReStatusHibernate implements ReStatusRepo {
                 tx.rollback();
         }
     }
-    }
-
+}

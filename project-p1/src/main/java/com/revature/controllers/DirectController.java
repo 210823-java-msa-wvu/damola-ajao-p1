@@ -1,7 +1,7 @@
 package com.revature.controllers;
 
-import com.revature.models.ReStatus;
-import com.revature.repos.hibernate.ReStatusHibernate;
+import com.revature.models.ReStatusDS;
+import com.revature.repos.hibernate.ReStatusDSHibernate;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -12,14 +12,14 @@ public class DirectController implements FrontController{
     @Override
     public void process(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
-        ReStatus bata = new ReStatus();
-        ReStatusHibernate tatoba = new ReStatusHibernate();
-        //need to get Id
+        ReStatusDS bata = new ReStatusDS();
+        ReStatusDSHibernate batakiri = new ReStatusDSHibernate();
+        bata.setRlink(Integer.parseInt(request.getParameter("statnum")));
         bata.setDirect_supervisor(request.getParameter("descript"));
         bata.setDs_date(request.getParameter("date"));
         bata.setDs_approval(Boolean.parseBoolean(request.getParameter("type")));
 
-        tatoba.update(bata);
+        batakiri.update(bata);
         response.sendRedirect("static/subcompDIRECT.html");
     }
 }
