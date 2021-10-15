@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Employee Reimbursement Form</title>
 </head>
-<h1>Reimbursement Form</h1>
+    <h1>Reimbursement Form</h1>
 <body style="background-color:grey;">
 <br>
 <div class="container">
-    <form action="/project-p1/static/employee" method="POST">
+    <form action="/project-p1/reimb" id="reimburse" method="POST">
         <div>
             <label for="date">Date</label>
             <input type="date" name="date" id="date" min="2018-01-01">
@@ -29,27 +29,27 @@
             Event Type
             <div>
                 <label for="uni">University Course</label>
-                <input type="radio" name="type" id="uni" value="uni">
+                <input type="radio" name="type" id="uni" value="University Course">
             </div>
             <div>
                 <label for="semi">Seminar</label>
-                <input type="radio" name="type" id="semi" value="semi">
+                <input type="radio" name="type" id="semi" value="Seminar">
             </div>
             <div>
                 <label for="certs">Certification Preparation</label>
-                <input type="radio" name="type" id="certs" value="cert">
+                <input type="radio" name="type" id="cert" value="Certification Preparation">
             </div>
             <div>
                 <label for="certs">Certifications</label>
-                <input type="radio" name="type" id="certs" value="certs">
+                <input type="radio" name="type" id="certs" value="Certifications">
             </div>
             <div>
                 <label for="certs">Technical Training</label>
-                <input type="radio" name="type" id="certs" value="tech">
+                <input type="radio" name="type" id="tech" value="Technical Training">
             </div>
             <div>
                 <label for="certs">Other</label>
-                <input type="radio" name="type" id="certs" value="other">
+                <input type="radio" name="type" id="other" value="Other">
             </div>
         </div>
         <br>
@@ -118,13 +118,27 @@
             <option>Letter Grade</option>
             <option>Pass/Fail</option>
         </select>
-        <input type="submit" class="btn btn-primary" value="Submit">
+        <br>
+        Grade
+        <br>
+        <select name="grade">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+            <option value="Pass">Pass</option>
+            <option value="Fail">Fail</option>
+        </select>
+        <button type="submit" class="btn btn-primary" >Submit</button>
+<!--        <button type="button"> Sending</button>-->
 
 
     </form>
 
 
 </div>
+<!--<script src="employeeform.js"></script>-->
 </body>
 </html>
 

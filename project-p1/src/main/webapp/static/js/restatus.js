@@ -1,3 +1,18 @@
+function load() {
+    document.getCoo\\\
+
+
+
+
+}
+
+function populateData(res) {
+     let dataSection = document.getElementById('data');
+
+     let name = document.createElement('h1');
+     name.innerHTML = "Hello" + " " + res.firstname + " " + res.lastname;
+     dataSection.appendChild(name);
+     }
 function getRein() {
 
     let url = 'http://localhost:8080/project-p1/static/status';
@@ -23,3 +38,12 @@ function getRein() {
     xhttp.send();
 
 }
+function populateData(res) {
+     let dataSection = document.getElementById('data');
+
+     let name = document.createElement('h1');
+     name.innerHTML = "Hello" + " " + res.firstname + " " + res.lastname;
+     dataSection.appendChild(name);
+
+}
+

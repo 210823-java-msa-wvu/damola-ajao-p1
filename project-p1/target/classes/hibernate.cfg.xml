@@ -15,7 +15,7 @@
         <property name="hibernate.format_sql">true</property>
         <property name="use_sql_comments">true</property>
 
-        <mapping class="com.revature.models.Grade"></mapping>
+
         <mapping class="com.revature.models.Reimbursement"></mapping>
         <mapping class="com.revature.models.User"></mapping>
         <mapping class="com.revature.models.ReStatus"></mapping>

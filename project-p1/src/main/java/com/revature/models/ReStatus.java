@@ -37,16 +37,8 @@ public class ReStatus {
     @Column(name = "b_date")
     private String b_date;
 
-    @Column(name = "benco_supervisor")
-    private String benco_supervisor;
 
-    @Column(name = "bs_approval")
-    private boolean bs_approval;
-
-    @Column(name = "bs_date")
-    private String bs_date;
-
-    public ReStatus(Integer rlink, String direct_supervisor, boolean ds_approval, String ds_date, String depart_head, boolean dh_approval, String dh_date, String benco, boolean b_approval, String b_date, String benco_supervisor, boolean bs_approval, String bs_date) {
+    public ReStatus(Integer rlink, String direct_supervisor, boolean ds_approval, String ds_date, String depart_head, boolean dh_approval, String dh_date, String benco, boolean b_approval, String b_date) {
         this.rlink = rlink;
         this.direct_supervisor = direct_supervisor;
         this.ds_approval = ds_approval;
@@ -57,9 +49,9 @@ public class ReStatus {
         this.benco = benco;
         this.b_approval = b_approval;
         this.b_date = b_date;
-        this.benco_supervisor = benco_supervisor;
-        this.bs_approval = bs_approval;
-        this.bs_date = bs_date;
+    }
+
+    public ReStatus() {
     }
 
     public Integer getRlink() {
@@ -142,29 +134,6 @@ public class ReStatus {
         this.b_date = b_date;
     }
 
-    public String getBenco_supervisor() {
-        return benco_supervisor;
-    }
-
-    public void setBenco_supervisor(String benco_supervisor) {
-        this.benco_supervisor = benco_supervisor;
-    }
-
-    public boolean isBs_approval() {
-        return bs_approval;
-    }
-
-    public void setBs_approval(boolean bs_approval) {
-        this.bs_approval = bs_approval;
-    }
-
-    public String getBs_date() {
-        return bs_date;
-    }
-
-    public void setBs_date(String bs_date) {
-        this.bs_date = bs_date;
-    }
 
     @Override
     public String toString() {
@@ -179,9 +148,6 @@ public class ReStatus {
                 ", benco='" + benco + '\'' +
                 ", b_approval=" + b_approval +
                 ", b_date='" + b_date + '\'' +
-                ", benco_supervisor='" + benco_supervisor + '\'' +
-                ", bs_approval=" + bs_approval +
-                ", bs_date='" + bs_date + '\'' +
                 '}';
     }
 }

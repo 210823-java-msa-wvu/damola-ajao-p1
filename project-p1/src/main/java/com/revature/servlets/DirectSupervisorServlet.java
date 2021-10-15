@@ -9,7 +9,7 @@ import java.io.IOException;
 public class DirectSupervisorServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         super.doPost(req, resp);
         System.out.println("Connection made");
 

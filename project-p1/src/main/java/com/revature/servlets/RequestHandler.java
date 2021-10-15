@@ -28,6 +28,9 @@ public class RequestHandler {
 
         controllerMap.put("login", new LoginController());
         controllerMap.put("users", new UserController());
+        controllerMap.put("reimb", new ReimbursementController());
+//        controllerMap.put("grade", new GradeController());
+//        controllerMap.put("direct", new DirectSupervisorController());
         //controllerMap.put("reimbursement")
     }
 

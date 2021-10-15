@@ -50,4 +50,20 @@ public class UserServices {
         }else
             return null;
     }
+
+    public String UserFname(String username){
+        User u = userRepo.getByUsername(username);
+        if (u != null){
+            return u.getFirstname();
+        }else
+            return null;
+    }
+
+    public String UserLname(String username){
+        User u = userRepo.getByUsername(username);
+        if (u != null){
+            return u.getLastname();
+        }else
+            return null;
+    }
 }

@@ -3,7 +3,7 @@ package com.revature.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name="users")
+@Table(name="reimbursement")
 public class Reimbursement {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -26,10 +26,13 @@ public class Reimbursement {
     private String descript;
 
     @Column(name = "cost")
-    private String cost;
+    private Double cost;
 
     @Column(name = "grading_format")
     private String grading_format;
+
+    @Column(name = "grade")
+    private String grade;
 
     @Column(name = "type_of_event")
     private String type_of_event;
@@ -37,7 +40,7 @@ public class Reimbursement {
     public Reimbursement() {
     }
 
-    public Reimbursement(Integer reimburseid, Integer useridlink, String date, String time, String location, String descript, String cost, String grading_format, String type_of_event) {
+    public Reimbursement(Integer reimburseid, Integer useridlink, String date, String time, String location, String descript, Double cost, String grading_format, String grade, String type_of_event) {
         this.reimburseid = reimburseid;
         this.useridlink = useridlink;
         this.date = date;
@@ -46,6 +49,7 @@ public class Reimbursement {
         this.descript = descript;
         this.cost = cost;
         this.grading_format = grading_format;
+        this.grade = grade;
         this.type_of_event = type_of_event;
     }
 
@@ -89,11 +93,11 @@ public class Reimbursement {
         this.descript = descript;
     }
 
-    public String getCost() {
+    public Double getCost() {
         return cost;
     }
 
-    public void setCost(String cost) {
+    public void setCost(Double cost) {
         this.cost = cost;
     }
 
@@ -121,6 +125,14 @@ public class Reimbursement {
         this.useridlink = useridlink;
     }
 
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
     @Override
     public String toString() {
         return "Reimbursement{" +
@@ -130,8 +142,9 @@ public class Reimbursement {
                 ", time='" + time + '\'' +
                 ", location='" + location + '\'' +
                 ", descript='" + descript + '\'' +
-                ", cost='" + cost + '\'' +
+                ", cost=" + cost +
                 ", grading_format='" + grading_format + '\'' +
+                ", grade='" + grade + '\'' +
                 ", type_of_event='" + type_of_event + '\'' +
                 '}';
     }

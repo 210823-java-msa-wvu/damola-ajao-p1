@@ -1,9 +1,5 @@
 package com.revature.servlets;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.revature.models.Reimbursement;
-import com.revature.services.ReimbursementServices;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,8 +12,8 @@ public class ReimbursementServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
 
-    ObjectMapper om = new ObjectMapper();
-    ReimbursementServices reimbursementServicesService = new ReimbursementServices();
+//    ObjectMapper om = new ObjectMapper();
+//    ReimbursementServices reimbursementServicesService = new ReimbursementServices();
 
 
     @Override
@@ -25,31 +21,50 @@ public class ReimbursementServlet extends HttpServlet {
 
 
 
-        response.getWriter().write(om.writeValueAsString(reimbursementServicesService.getAllRe()));
+//        response.getWriter().write(om.writeValueAsString(reimbursementServicesService.getAllRe()));
     }
 
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String date = request.getParameter("date");
-        String time = request.getParameter("time");
-        String descript = request.getParameter("descript");
-        String type = request.getParameter("type");
-        String location = request.getParameter("location");
-        String cost = request.getParameter("cost");
-        String grading = request.getParameter("grading");
+        super.doPost(request, response);
 
-        Reimbursement rein = new Reimbursement();
-        //rein.setUseridlink(cookie);
-        rein.setDate(date);
-        rein.setTime(time);
-        rein.setDescript(descript);
-        rein.setType_of_event(type);
-        rein.setLocation(location);
-        rein.setCost(cost);
-        rein.setGrading_format(grading);
+//        Cookie[] cookie = request.getCookies();
+//        Reimbursement rein = new Reimbursement();
+//        //rein.setUseridlink(cookie);
+//        rein.setDate(request.getParameter("date"));
+//        rein.setTime(request.getParameter("time"));
+//        rein.setDescript(request.getParameter("descript"));
+//        rein.setType_of_event(request.getParameter("type"));
+//        rein.setLocation(request.getParameter("location"));
+//        rein.setCost(Double.parseDouble(request.getParameter("cost")));
+//        rein.setGrading_format(request.getParameter("grading"));
 
-//        response.getWriter().write(om.writeValueAsString(a));
+
+
+
+
+
+//        ReinbursementHibernate saga = new ReinbursementHibernate();
+////        for()
+////        rein.setUseridlink(barter[0].getValue);
+//        rein.setDate(request.getParameter("date"));
+//        rein.setTime(request.getParameter("time"));
+//        rein.setDescript(request.getParameter("descript"));
+//        rein.setType_of_event(request.getParameter("type"));
+//        rein.setLocation(request.getParameter("location"));
+//        rein.setCost(Double.parseDouble(request.getParameter("cost")));
+//        rein.setGrading_format(request.getParameter("grading"));
+//
+//        saga.add(rein);
+        //        String date = request.getParameter("date");
+//        String time = request.getParameter("time");
+//        String descript = request.getParameter("descript");
+//        String type = request.getParameter("type");
+//        String location = request.getParameter("location");
+//        String cost = request.getParameter("cost");
+//        String grading = request.getParameter("grading");
+//
     }
 }
