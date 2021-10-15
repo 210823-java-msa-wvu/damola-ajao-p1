@@ -20,5 +20,6 @@ public class DirectController implements FrontController{
         bata.setDs_approval(Boolean.parseBoolean(request.getParameter("type")));
 
         tatoba.update(bata);
+        response.sendRedirect("static/subcompDIRECT.html");
     }
 }

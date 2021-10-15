@@ -51,7 +51,7 @@ public class ReimbursementController implements FrontController{
 
         if (cookies != null) {
             for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("link")) {
+                if (cookie.getName().equals("UserId")) {
                     //do something
                     emp = Integer.parseInt(cookie.getValue());
                     open.setRlink(emp);

@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Reimbursement Status</title>
-    <section>
-    </section>
+
 
 </head>
-<body style="background-color:grey;" onload="load()">
+<body style="background-color:grey;">
+<div class="container">
 
-<script src="./restatus.js"></script>
+    <button type="button" class="btn btn-primary" method="GET" onclick="getReins()">See all Statuses</button>
+
+    <section id="bankai"></section>
+
+
+</div>
+<script src="./js/restatus.js"></script>
 </body>
 </html>

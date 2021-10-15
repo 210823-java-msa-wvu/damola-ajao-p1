@@ -7,6 +7,9 @@ import javax.persistence.*;
 public class ReStatus {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name = "statusid")
+    private Integer statusid;
+    
     @Column(name = "rlink")
     private Integer rlink;
 
@@ -38,7 +41,8 @@ public class ReStatus {
     private String b_date;
 
 
-    public ReStatus(Integer rlink, String direct_supervisor, boolean ds_approval, String ds_date, String depart_head, boolean dh_approval, String dh_date, String benco, boolean b_approval, String b_date) {
+    public ReStatus(Integer statusid, Integer rlink, String direct_supervisor, boolean ds_approval, String ds_date, String depart_head, boolean dh_approval, String dh_date, String benco, boolean b_approval, String b_date) {
+        this.statusid = statusid;
         this.rlink = rlink;
         this.direct_supervisor = direct_supervisor;
         this.ds_approval = ds_approval;
@@ -134,11 +138,19 @@ public class ReStatus {
         this.b_date = b_date;
     }
 
+    public Integer getStatusid() {
+        return statusid;
+    }
+
+    public void setStatusid(Integer statusid) {
+        this.statusid = statusid;
+    }
 
     @Override
     public String toString() {
         return "ReStatus{" +
-                "rlink=" + rlink +
+                "statusid=" + statusid +
+                ", rlink=" + rlink +
                 ", direct_supervisor='" + direct_supervisor + '\'' +
                 ", ds_approval=" + ds_approval +
                 ", ds_date='" + ds_date + '\'' +

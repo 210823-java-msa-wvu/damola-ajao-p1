@@ -1,6 +1,20 @@
 
 let url = 'http://localhost:8080/project-p1/employeeform';
 
+function loadEmployee() {
+    let zed = JSON.parse(getCookie("Fname"));
+    let red = JSON.parse(getCookie("Lname"));
+    //console.log(emp);
+    let dataSection = document.getElementById('display');
+
+    let name = document.createElement('h3');
+    name.innerHTML = "Welcome," + " " + zed + " "+red;
+    dataSection.appendChild(name);
+    let details = document.createElement('div');
+
+    dataSection.appendChild(details);
+}
+
 //let reinbu = {
 //      todayDate: document.getElementById('date').value,
 //      time: document.getElementById('time').
@@ -71,9 +85,6 @@ function addReinbu() {
 
 }
 
-function goabol(){
- console.log("Begin again")
-}
 
 function add() {
 
@@ -123,45 +134,3 @@ function add() {
 
 
 }
-//console.log(JSON.stringify(reinbu));
-//
-//    function handleSubmit(event) {
-//      event.preventDefault();
-//
-//      const data = new FormData(event.target);
-//
-//      const value = data.get('email');
-//
-//      console.log({ value });
-//    }
-//    /*--Event Listeners--*/
-//    const sampleForm = document.querySelector("#sampleForm");
-//    if(sampleForm) {
-//        sampleForm.addEventListener("submit", function(e) {
-//            submitForm(e, this);
-//        });
-//    }
-//
-//async function submitForm(e, form) {
-//    // 1. Prevent reloading page
-//    e.preventDefault();
-//    // 2. Submit the form
-//    // 2.1 User Interaction
-//    const btnSubmit = document.getElementById('btnSubmit');
-//    btnSubmit.disabled = true;
-//    setTimeout(() => btnSubmit.disabled = false, 2000);
-//    // 2.2 Build JSON body
-//    const jsonFormData = buildJsonFormData(form);
-//    // 2.3 Build Headers
-//    const headers = buildHeaders();
-//    // 2.4 Request & Response
-//    const response = await fetchService.performPostHttpRequest(`https://jsonplaceholder.typicode.com/posts`, headers, jsonFormData); // Uses JSON Placeholder
-//    console.log(response);
-//    // 2.5 Inform user of result
-//    if(response)
-//        window.location = `/static/submissioncomplete.html`;
-//    else
-//        alert(`An error occured.`);
-//}
-//    const form = document.querySelector('form');
-//    form.addEventListener('submit', handleSubmit);

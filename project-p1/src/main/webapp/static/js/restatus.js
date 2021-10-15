@@ -1,27 +1,23 @@
-function load() {
-    document.getCoo
 
-
-
-
-}
-
-function populateData(res) {
-     let dataSection = document.getElementById('data');
-
-     let name = document.createElement('h1');
-     name.innerHTML = "Hello" + " " + res.firstname + " " + res.lastname;
-     dataSection.appendChild(name);
-     }
-function getRein() {
+function getReins() {
 
     let url = 'http://localhost:8080/project-p1/static/status';
+
+    let section = document.getElementById("bankai");
+    section.innerHTML='<div class="spinner-border text-primary"></div>';
 
     let xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = receiveData;
 
-    function receiveData() {
+
+
+    xhttp.open('GET', url, true);
+
+    xhttp.send();
+
+}
+ function receiveData() {
         console.log(this.readyState);
 
         if (this.readyState == 4) {
@@ -32,18 +28,4 @@ function getRein() {
             console.log(r);
         }
     }
-
-    xhttp.open('GET', url, true);
-
-    xhttp.send();
-
-}
-function populateData(res) {
-     let dataSection = document.getElementById('data');
-
-     let name = document.createElement('h1');
-     name.innerHTML = "Hello" + " " + res.firstname + " " + res.lastname;
-     dataSection.appendChild(name);
-
-}
 

@@ -21,5 +21,6 @@ public class DepartController implements FrontController{
         tora.setDh_approval(Boolean.parseBoolean(request.getParameter("type")));
 
         tatoba.update(tora);
+        response.sendRedirect("static/subcompDEPART.html");
     }
 }

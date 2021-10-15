@@ -15,12 +15,13 @@ public class BencoController implements FrontController{
         ReStatus taka = new ReStatus();
         ReStatusHibernate tatoba = new ReStatusHibernate();
         //need to get Id
+//        taka.setRlink();
         taka.setBenco(request.getParameter("descript"));
         taka.setB_date(request.getParameter("date"));
         taka.setB_approval(Boolean.parseBoolean(request.getParameter("type")));
 
         tatoba.update(taka);
-
+        response.sendRedirect("static/subcompBENCO.html");
 
     }
 }

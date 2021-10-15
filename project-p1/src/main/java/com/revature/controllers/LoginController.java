@@ -43,7 +43,11 @@ public class LoginController implements FrontController {
         response.addCookie(lname);
         response.addCookie(rlink);
 
-        if (userServices.login(username, password)) {
+        if (userServices.login(username, password) == false) {
+            response.setStatus(403);
+            response.getWriter().write("You have the wrong info.");
+            response.sendRedirect("static/404.html");
+        }else if (userServices.login(username, password)){
             switch (job_title) {
                 case "Employee":
                     //Employee Case
@@ -69,10 +73,6 @@ public class LoginController implements FrontController {
                     response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Invalid login credentials");
                     break;
             }
-        } else if (!userServices.login(username,password)){
-            response.setStatus(403);
-            response.getWriter().write("You have the wrong info.");
-            response.sendRedirect("static/404.html");
         }
         }
 
