@@ -75,19 +75,3 @@ public class ReimbursementController implements FrontController{
     }
 
         }
-
-//        String date = request.getParameter("date");
-//        String time = request.getParameter("time");
-//        String descript = request.getParameter("descript");
-//        String type = request.getParameter("type");
-//        String location = request.getParameter("location");
-//        String cost = request.getParameter("cost");
-//        String grading = request.getParameter("grading");
-//        Reimbursement rein = new Reimbursement();
-//        Cookie barter[] = request.getCookies();
-//
-
-
-
-
-
